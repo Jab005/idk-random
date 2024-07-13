@@ -91,9 +91,3 @@ class Utilities:
         else:
           notation += empty
       print(notation)
-  
-  
-
-# BORDER TEST BLYAD #
-
-exec(input())

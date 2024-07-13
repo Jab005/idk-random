@@ -1,6 +1,6 @@
 # The IDK
 ## What is this?
-Truly idk the purposes of this repo.<br>Will just adds random things here because of that's what i like (ig).
+Truly idk the purposes of this repo.<br>Just adding random things here because of that's what i like (ig).
 
 ## This is such as garbage!
 Ik, why did you even cared about random garbage project?<br>I didn't force you to care about this LoL.

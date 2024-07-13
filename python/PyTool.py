@@ -29,6 +29,8 @@ class Utilities:
   def __init__(self):
     print("Utility and Tool packages by Jab005 successfully active!\n> Please do 'Utilities.info()' for more info!")
   
+  #These two are still unfinished, will be updated later...
+  
   #Help list
   #def info(method=""):
     #if method == "":

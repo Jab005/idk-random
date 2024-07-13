@@ -106,3 +106,5 @@ class Token:
             global result
             result = result + random.choice(list_multi_mix)
         print("Here's the token generation result: \n",result)
+
+#NOTE ON 2024: This is Class-Function Method of token generator. See token.py for execute inout versions.

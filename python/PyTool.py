@@ -5,19 +5,19 @@
 class LogicGate:
   
   #Return NAND (True if both statements aren't true at the same time)
-  def nand(condition1,condition2):
+  def nand(condition1, condition2):
     return not (condition1 and condition2)
   
   #Return NOR (True if both statements are false at the same time)
-  def nor(condition1,condition2):
+  def nor(condition1, condition2):
     return not (condition1 or condition2)
   
   #Return XOR (True if both statements are in the different condition)
-  def xor(condition1,condition2):
+  def xor(condition1, condition2):
     return (condition1 or condition2) and (not (condition1 and condition2))
   
   #Return XNOR (True if both statements are in the same condition)
-  def xnor(condition1,condition2):
+  def xnor(condition1, condition2):
     return not ((condition1 or condition2) and (not (condition1 and condition2)))
 
 

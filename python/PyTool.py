@@ -37,7 +37,7 @@ class Utilities:
       
     #elif :
   
-  #Return value of square root of input. Outputs float or integer based of value return
+  #Return value of square root of input. Outputs float or integer based of value return.
   def sqrt(value):
     if (value**0.5) % 1 == 0:
       return int(value**0.5)
@@ -45,7 +45,7 @@ class Utilities:
       return value**0.5
   
   #Return True if given value is greater or equal of min value and less or equal of max value (shortcut of double and statements). Useful if you're trying to input multi random chance without creating a variable.
-  def between(minVal: float, maxVal: float, value: float):
+  def between(minVal:float,maxVal:float,value:float):
     return value >= minVal and value <= maxVal
   
   #Create simple dot mapping visualization of XY coordinate position in 2D. Start from one at top-left to bottom-right. Inputting locationX or locationY zero will return no point.

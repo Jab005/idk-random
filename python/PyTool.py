@@ -25,27 +25,40 @@ class LogicGate:
 #Some extra utilities
 class Utilities:
   
-  #User just need to do 'Utilities()' and they'll be redirected to use 'Utilities.info()''
+  #User just need to do 'Utilities()' and they'll be redirected to use 'Utilities.info()'.
   def __init__(self):
     print("Utility and Tool packages by Jab005 successfully active!\n> Please do 'Utilities.info()' for more info!")
   
-  #These two are still unfinished, will be updated later...
-  
-  #Help list
-  #def info(method=""):
-    #if method == "":
-      
-    #elif :
+  #Help list.
+  def info(method:str=""):
+    selection = method.lower()
+    match selection:
+      case "sqrt":
+        print("Return square root of input. Float-integer support based result.\nFormat: sqrt(value:float|int).")
+      case "between":
+        print("Return boolean of value in between minimum and maximum value.\nFormat: between(minVal:float|int, maxVal:float|int, value:float|int).")
+      case "point2da":
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from one at top-left to bottom-right. Inputting any pointer to zero will return no pointer.\nFormat: point2DA(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o').")
+      case "point2db":
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from one at bottom-left to top-right. Inputting any pointer to zero will return no pointer.\nFormat: point2DB(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o').")
+      case "point2dc":
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from zero at top-left to bottom-right.\nFormat: point2DC(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o').")
+      case "point2dd":
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from zero at bottom-left to top-right.\nFormat: point2DD(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o').")
+      case "formattext":
+        print("Formatting multiple symbols to string array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols.\nFormat: formatText(text:str, symbol:str='@',*placeholder:str)")
+      case _:
+        print("Extra utilities for python.\nDo 'Utilities.info('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText")
   
   #Return value of square root of input. Outputs float or integer based of value return.
-  def sqrt(value):
+  def sqrt(value:float|int):
     if (value**0.5) % 1 == 0:
       return int(value**0.5)
     else:
       return value**0.5
   
   #Return True if given value is greater or equal of min value and less or equal of max value (shortcut of double and statements). Useful if you're trying to input multi random chance without creating a variable.
-  def between(minVal:float, maxVal:float, value:float):
+  def between(minVal:float|int, maxVal:float|int, value:float|int):
     return value >= minVal and value <= maxVal
   
   #Create simple dot mapping visualization of XY coordinate position in 2D. Start from one at top-left to bottom-right. Inputting locationX or locationY zero will return no point.
@@ -91,3 +104,13 @@ class Utilities:
         else:
           notation += empty
       print(notation)
+  
+  #Formatting multiple symbols to strings. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols.
+  def formatText(text:str, symbol:str="@",*placeholder:str):
+    raw = text.split(symbol)
+    result = ""
+    for strl in range(len(raw)-1):
+      result += raw[strl] + placeholder[min(strl, len(placeholder)-1)]
+    result += raw[len(raw)-1]
+    return result
+  

@@ -46,10 +46,8 @@ class Util:
         print("Formatting multiple symbols to string array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols.\nFormat: formatText(text:str, symbol:str='@',*placeholder:str)")
       case "factorial":
         print("Return value of number factorial.\nFormat: factorial(num:int)")
-      case "tetrative":
-        print("Return value of number tetration.\nFormat: tetrative(num:int|float,mult:int|float)")
       case _:
-        print("Extra utilities for python.\nDo 'Utilities.info('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial\n9.tetrative")
+        print("Extra utilities for python.\nDo 'Utilities.info('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial")
   
   #Return value of square root of input. Outputs float or integer based of value return
   def sqrt(value:float|int):
@@ -106,7 +104,7 @@ class Util:
           notation += empty
       print(notation)
   
-  #Formatting multiple symbols to strings. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols
+  #Formatting multiple symbols to strings array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols
   def formatText(text:str, symbol:str="@",*placeholder:str):
     raw = text.split(symbol)
     result = ""
@@ -121,10 +119,4 @@ class Util:
     for factor in range(1, num+1):
       fNum *= factor
     return fNum
-  
-  #Return tetrative value of number. No pentation bcs fvck you!
-  def tetrative(num:int|float,mult:int|float):
-    for rep in range(mult):
-      num *= num
-    return num
   

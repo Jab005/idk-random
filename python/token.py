@@ -60,3 +60,4 @@ else:
   print("\nSorry, but your input type isn't match of any available type selection!\nPlease be carefully if there's mistype happens and only available type selection it's just '1' until '7'.")
 
 #NOTE ON 2024: This is execute-input version, see token_gen.py for Class-Function Method.
+#WILL BE UPDATED LATER

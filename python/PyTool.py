@@ -22,32 +22,32 @@ class LogicGate:
 #Some extra utilities
 class Util:
   
-  #User just need to do 'Utilities()' and they'll be redirected to use 'Utilities.info()'
-  def __init__(self):
-    print("Utility and Tool packages by Jab005 successfully active!\n> Please do 'Utilities.info()' for more info!")
-  
-  #Help list
-  def info(method:str=""):
+  #User just need to do 'Util()' and they'll be hinted with another help method
+  def __init__(self, method:str=""):
     selection = method.lower()
     match selection:
       case "sqrt":
-        print("Return square root of input. Float-integer support based result.\nFormat: sqrt(value:float|int)")
+        print("Return square root of input. Float-integer support based result.\nUsage: sqrt(value:float|int)")
       case "between":
-        print("Return boolean of value in between minimum and maximum value.\nFormat: between(minVal:float|int, maxVal:float|int, value:float|int)")
+        print("Return boolean of value in between minimum and maximum value.\nUsage: between(minVal:float|int, maxVal:float|int, value:float|int)")
       case "point2da":
-        print("Visualizes 2 dimensional coordinate map with pointer. Start from one at top-left to bottom-right. Inputting any pointer to zero will return no pointer.\nFormat: point2DA(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from one at top-left to bottom-right. Inputting any pointer to zero will return no pointer.\nUsage: point2DA(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
       case "point2db":
-        print("Visualizes 2 dimensional coordinate map with pointer. Start from one at bottom-left to top-right. Inputting any pointer to zero will return no pointer.\nFormat: point2DB(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from one at bottom-left to top-right. Inputting any pointer to zero will return no pointer.\nUsage: point2DB(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
       case "point2dc":
-        print("Visualizes 2 dimensional coordinate map with pointer. Start from zero at top-left to bottom-right.\nFormat: point2DC(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from zero at top-left to bottom-right.\nUsage: point2DC(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
       case "point2dd":
-        print("Visualizes 2 dimensional coordinate map with pointer. Start from zero at bottom-left to top-right.\nFormat: point2DD(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
+        print("Visualizes 2 dimensional coordinate map with pointer. Start from zero at bottom-left to top-right.\nUsage: point2DD(locationX:int, locationY:int, maxX:int, maxY:int, point:str='X', empty:str='o')")
       case "formattext":
-        print("Formatting multiple symbols to string array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols.\nFormat: formatText(text:str, symbol:str='@',*placeholder:str)")
+        print("Formatting multiple symbols to string array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols.\nUsage: formatText(text:str, symbol:str='@',*placeholder:str)")
       case "factorial":
-        print("Return value of number factorial.\nFormat: factorial(num:int)")
+        print("Return the result of number factorial.\nUsage: factorial(num:int)")
+      case "tetra":
+        print("Return the result of number tetration. May not working well when the result is too big.\nUsage: tetra(num:int|float, mult:int)")
+      case "strremove":
+        print("Removes string parts from string.\nUsage: strRemove(text:str, *part:str)")
       case _:
-        print("Extra utilities for python.\nDo 'Utilities.info('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial")
+        print("Extra utilities for python.\nDo 'Utilities('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial\n9. tetra\n10. strRemove")
   
   #Return value of square root of input. Outputs float or integer based of value return
   def sqrt(value:float|int):
@@ -104,7 +104,7 @@ class Util:
           notation += empty
       print(notation)
   
-  #Formatting multiple symbols to strings array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols
+  #Formatting multiple symbols to strings array. Any excess of symbols in string (not enough placeholder) will return last placeholder for next symbols replacement
   def formatText(text:str, symbol:str="@",*placeholder:str):
     raw = text.split(symbol)
     result = ""
@@ -113,10 +113,24 @@ class Util:
     result += raw[len(raw)-1]
     return result
   
-  #Return factorial value of number
+  #Return factorial result of number
   def factorial(num:int):
     fNum = 1
     for factor in range(1, num+1):
       fNum *= factor
     return fNum
+  
+  #Return tetration result of number. May not working well when the result is too big. No pentation bcs fvc you! (not even me can handle it)
+  def tetra(num:int|float, mult:int):
+    res = num
+    for rep in range(mult-1):
+      res = num ** res
+    return res
+  
+  #Removes string parts from string
+  def strRemove(text:str, *part:str):
+    resl = text
+    for rep in range(len(part)):
+      resl = resl.replace(part[min(rep,len(part)-1)],"")
+    return resl
   

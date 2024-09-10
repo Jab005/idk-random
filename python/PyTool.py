@@ -49,7 +49,7 @@ class Util:
       case "rate":
         print("Calculates growth rate of starting number by its percentage for amount of loop times.\nUsage: rate(num:int|float=0,percent:int=0,loop:int=1)")
       case _:
-        print("Extra utilities for python.\nDo 'Utilities('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial\n9. tetra\n10. strRemove")
+        print("Extra utilities for python.\nDo 'Utilities('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial\n9. tetra\n10. strRemove\n11. rate")
   
   #Return value of square root of input. Outputs float or integer based of value return
   def sqrt(value:float|int):

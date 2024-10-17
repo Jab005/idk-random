@@ -58,179 +58,179 @@ class Token:
   def number(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNum)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random lowercased string
   def lowcase(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listLow)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random upcased string
   def upcase(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listUp)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random symbol string
   def symbol(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random numbered + lowcased string
   def numlow(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNumLow)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random numbered + upcased string
   def numup(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNumUp)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random numbered + symbol string
   def numsym(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNumSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random low + upcased string
   def lowup(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listLowUp)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random lowcased + symbol string
   def lowsym(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listLowSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random upcased + symbol string
   def upsym(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listUpSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random numbered + low + upcased string
   def numlowup(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNumLowUp)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random numbered + lowcased + symbol string
   def numlowsym(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNumLowSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random numbered + upcased + symbol string
   def numupsym(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listNumUpSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random low + upcased + symbol string
   def lowupsym(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listLowUpSym)
-    print("Token result:\n"+result)
+    return result
   
   #Generate random mixed string
   def mix(length:int=10):
     result = ""
     if length > 500:
-      print("Max token length is 500!\nIf you want longer token, just stack. And here, this generated token is 500 characters length.")
+      print("Max token length is 500 for safety purpose!\nIf you want it longer, just stack. Current result turned to 500 chars length.")
       length = 500
     else:
       pass
     for rep in range(length):
       result += rnd.choice(listMix)
-    print("Token result:\n"+result)
+    return result
   

@@ -1,25 +1,3 @@
-#Logical operator (using function)
-class LogicGate:
-  
-  #Return NAND (True if both statements aren't true at the same time)
-  def nand(condition1, condition2):
-    return not (condition1 and condition2)
-  
-  #Return NOR (True if both statements are false at the same time)
-  def nor(condition1, condition2):
-    return not (condition1 or condition2)
-  
-  #Return XOR (True if both statements are in the different condition)
-  def xor(condition1, condition2):
-    return (condition1 or condition2) and (not (condition1 and condition2))
-  
-  #Return XNOR (True if both statements are in the same condition)
-  def xnor(condition1, condition2):
-    return not ((condition1 or condition2) and (not (condition1 and condition2)))
-
-
-
-#Some extra utilities
 class Util:
   
   #User just need to do 'Util()' and they'll be hinted with another help methods
@@ -48,8 +26,10 @@ class Util:
         print("Removes string parts from string.\nUsage: strRemove(text:str, *part:str)")
       case "rate":
         print("Calculates growth rate of starting number by its percentage for amount of loop times.\nUsage: rate(num:int|float=0,percent:int=0,loop:int=1)")
+      case "select":
+        print("Returns value 1 when the condition is true, otherwise return value 2.\nUsage: select(condition, value1, value2)")
       case _:
-        print("Extra utilities for python.\nDo 'Util('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial\n9. tetra\n10. strRemove\n11. rate")
+        print("Extra utilities for python.\nDo 'Util('method')' for each method info.\nAvailable methods:\n1. sqrt\n2. between\n3. point2DA\n4. point2DB\n5. point2DC\n6. point2DD\n7. formatText\n8. factorial\n9. tetra\n10. strRemove\n11. rate\n12. select")
   
   #Return value of square root of input. Outputs float or integer based of value return
   def sqrt(value:float|int):
@@ -142,4 +122,7 @@ class Util:
     for gl in range(loop):
       val += val*(percent/100)
     return val
-
+  
+  #Return value 1 when true and value 2 when false
+  def select(condition, value1, value2):
+    return value1 if condition else value2
